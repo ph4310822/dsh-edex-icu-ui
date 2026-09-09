@@ -1,0 +1,200 @@
+/* PATIENT MONITOR (featured): the SimVitals monitor's visual language —
+   near-black interior, fine blue-gray grid lanes, colored lane labels and
+   huge numeric values, alarm strip. All values from analysis.json; no glow
+   (the reference is flat). */
+
+.monitor {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+  background: #020405;
+  border: 1px solid #1e2a34;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Bed / status line: green bed id, muted mode, right-aligned clock. */
+.bedLine {
+  flex: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 8px;
+  border-bottom: 1px solid #1e2a34;
+  font-size: 10px;
+}
+
+.bedId {
+  color: #37ff71;
+  letter-spacing: 1px;
+}
+
+.bedMode {
+  color: #7f96a8;
+  letter-spacing: 1px;
+}
+
+.bedClock {
+  margin-left: auto;
+  color: #eaf4fd;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Alarm strip: blue-gray ALL CLEAR steady state; red band when the host
+   link is down (the reference's critical band). */
+.alarmBand {
+  flex: none;
+  padding: 3px 8px;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.alarmClear {
+  color: #7f96a8;
+  background: rgba(127, 150, 168, 0.08);
+}
+
+.alarmAlert {
+  color: #eaf4fd;
+  background: #d84351;
+}
+
+/* Lane rows: waveform grid on the left, numeric block on the right. */
+.lanes {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.laneRow {
+  flex: 1;
+  display: flex;
+  min-height: 0;
+  border-bottom: 1px solid #1a262e;
+}
+
+.laneRow:last-child {
+  border-bottom: none;
+}
+
+.lane {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  border-right: 1px solid #1a262e;
+}
+
+.laneCanvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.laneLabelGreen,
+.laneLabelCyan,
+.laneLabelYellow {
+  position: absolute;
+  top: 3px;
+  left: 6px;
+  font-size: 9px;
+  letter-spacing: 1px;
+  z-index: 1;
+}
+
+.laneLabelGreen { color: #37ff71; }
+.laneLabelCyan { color: #29dfff; }
+.laneLabelYellow { color: #ffd34e; }
+
+/* Numeric readout block: colored label, huge value, muted limits. */
+.readout {
+  flex: none;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1px;
+  padding: 2px 8px;
+  overflow: hidden;
+}
+
+.readValueGreen,
+.readValueCyan,
+.readValueYellow {
+  font-size: clamp(16px, 3.2vh, 30px);
+  line-height: 1.05;
+  font-variant-numeric: tabular-nums;
+}
+
+.readValueGreen { color: #37ff71; }
+.readValueCyan { color: #29dfff; }
+.readValueYellow { color: #ffd34e; }
+
+.readoutLabelGreen,
+.readoutLabelCyan,
+.readoutLabelYellow {
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+
+.readoutLabelGreen { color: #37ff71; }
+.readoutLabelCyan { color: #29dfff; }
+.readoutLabelYellow { color: #ffd34e; }
+
+.readoutSub {
+  font-size: 8px;
+  color: #7f96a8;
+  white-space: nowrap;
+}
+
+/* NIBP/temp footer line, muted like the reference's auxiliary text. */
+.tempLine {
+  flex: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  border-top: 1px solid #1e2a34;
+  font-size: 10px;
+}
+
+.tempLabel {
+  color: #7f96a8;
+  letter-spacing: 1px;
+}
+
+.tempValue {
+  color: #eaf4fd;
+  font-variant-numeric: tabular-nums;
+}
+
+.tempValue + .tempLabel {
+  margin-left: auto;
+}
+
+/* Numeric readout flicker: the value cells pulse their opacity subtly,
+   like a monitor refreshing its samples. Reduced-motion falls back to the
+   static value. */
+.readValueGreen,
+.readValueCyan,
+.readValueYellow {
+  animation: monitor-value-pulse 2s steps(2, jump-none) infinite;
+}
+
+@keyframes monitor-value-pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.82; }
+  100% { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .readValueGreen,
+  .readValueCyan,
+  .readValueYellow {
+    animation: none;
+  }
+}
