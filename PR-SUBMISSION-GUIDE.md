@@ -1,6 +1,6 @@
 # 提交 PR 到 awesome-dsh-plugin 的避坑指南
 
-> 总结自 ph4310822/dsh-edex-ui 投稿 PR 的实战经验
+> 总结自 ph4310822/dsh-edex-ui 投稿 PR（本仓库为同系列变体 dsh-edex-icu-ui） 的实战经验
 
 ---
 

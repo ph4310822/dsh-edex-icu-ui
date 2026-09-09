@@ -392,10 +392,10 @@ test a rebuild without interrupting it, the workflow is:
    section 6):
    ```sh
    cd ~/.dsh/profiles/web-edex
-   rm -rf node_modules/@danielng23/dsh-edex-ui \
-          node_modules/@danielng23/dsh-client-ui-edex \
-          node_modules/@danielng23/dsh-client-ui-theme-terminal \
-          node_modules/@danielng23/dsh-host-system-metrics
+   rm -rf node_modules/@danielng23/dsh-edex-icu-ui \
+          node_modules/@danielng23/dsh-icu-client-ui-edex \
+          node_modules/@danielng23/dsh-icu-client-ui-theme-terminal \
+          node_modules/@danielng23/dsh-icu-host-system-metrics
    pnpm install
    ```
 
@@ -419,7 +419,7 @@ test a rebuild without interrupting it, the workflow is:
    change):
    ```sh
    cd /path/to/deepseek-harness
-   pnpm dsh plugin --profile web remove @danielng23/dsh-edex-ui
+   pnpm dsh plugin --profile web remove @danielng23/dsh-edex-icu-ui
    ```
 
 7. **Restart the main 3080 server** (do this after the scratch server is
@@ -454,8 +454,8 @@ once:
 | Port | Profile | Plugin | Use |
 |---|---|---|---|
 | 3080 | `web` (instance started before the add) | **none** | baseline GUI without the plugin |
-| 3081 | `web` | **npm production** — `@danielng23/dsh-edex-ui@0.1.0` | verify the published package |
-| 3083 | `web-edex` | **local** — `file:/path/to/dsh-edex-ui/packages/bundle` | iterate on the checkout |
+| 3081 | `web` | **npm production** — `@danielng23/dsh-edex-icu-ui@0.1.0` | verify the published package |
+| 3083 | `web-edex` | **local** — `file:/path/to/dsh-edex-icu-ui/packages/bundle` | iterate on the checkout |
 
 - **3080** is the plain GUI. A running instance keeps its in-memory config
   until it is restarted, so an instance started before `plugin add` stays
@@ -464,7 +464,7 @@ once:
 - **3081** is the production install from npm:
   ```sh
   cd /path/to/deepseek-harness
-  pnpm dsh plugin --profile web add @danielng23/dsh-edex-ui
+  pnpm dsh plugin --profile web add @danielng23/dsh-edex-icu-ui
   pnpm dsh web --port 3081
   ```
 - **3083** is the local install from this checkout. The bundle's `file:`
@@ -473,7 +473,7 @@ once:
   after `pnpm install`:
   ```sh
   cd /path/to/deepseek-harness
-  pnpm dsh plugin --profile web-edex add file:/path/to/dsh-edex-ui/packages/bundle
+  pnpm dsh plugin --profile web-edex add file:/path/to/dsh-edex-icu-ui/packages/bundle
   pnpm dsh web --port 3083
   ```
 
@@ -482,7 +482,7 @@ Verify each instance serves its plugin bundles:
 ```sh
 # 200 on 3081 and 3083, 404 on 3080 (no plugin)
 curl -s -o /dev/null -w '%{http_code}\n' \
-  http://127.0.0.1:3081/plugins/@danielng23/dsh-client-ui-edex/client.js
+  http://127.0.0.1:3081/plugins/@danielng23/dsh-icu-client-ui-edex/client.js
 ```
 
 Smoke-test the host RPC (both the published and local installs answer):

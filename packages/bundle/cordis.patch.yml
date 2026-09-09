@@ -1,4 +1,4 @@
-# The dsh-edex-ui bundle patch: an eDEX-UI style shell frame around the
+# The dsh-edex-icu-ui bundle patch (ICU patient-monitor theme): an eDEX-UI style shell frame around the
 # default web surface. Purely additive — nothing in the default surface is
 # disabled: the original UI stays fully composed and interactive, and the
 # eDEX frame (left system bar, right network bar, bottom-left filesystem

@@ -19,7 +19,7 @@ interface WidgetSlot<P> {
   id: string             // Stable React key + data-widget attribute
   title?: string         // Optional amber section heading
   fill?: boolean         // Flex-fill the bar's leftover height
-  compact?: boolean      // Tight padding for full-bleed widgets (globe)
+  compact?: boolean      // Tight padding for full-bleed widgets (featured monitor)
   bleed?: boolean        // Zero the chrome padding (terminal, file list)
   Component: ComponentType<P>  // The widget body
 }
@@ -55,7 +55,7 @@ const LEFT_WIDGETS: LeftWidgetSlot[] = [
 ```ts
 const RIGHT_WIDGETS: RightWidgetSlot[] = [
   { id: 'network-status', title: 'NETWORK STATUS', Component: NetworkStatusWidget },
-  { id: 'globe', title: 'WORLD VIEW', compact: true, Component: GlobeWidget },
+  { id: 'patient-monitor', title: 'PATIENT MONITOR', compact: true, fill: true, Component: PatientMonitorWidget },
   { id: 'traffic', title: 'TRAFFIC', fill: true, Component: TrafficWidget },
 ]
 ```
@@ -99,7 +99,7 @@ packages/ui-edex/src/client/
 │   ├── RightBar.module.css           # .panel only
 │   └── widgets/
 │       ├── NetworkStatusWidget.tsx + .module.css
-│       ├── GlobeWidget.tsx  + .module.css
+│       ├── PatientMonitorWidget.tsx  + .module.css
 │       └── TrafficWidget.tsx + .module.css
 │
 └── bottom-panel/
@@ -162,7 +162,7 @@ The `WidgetSection` wrapper supports four layout flags:
 | Flag | Effect |
 |------|--------|
 | `fill` | `flex: 1; display: flex; flex-direction: column; min-height: 0` — fills the bar's leftover height |
-| `compact` | `padding: 2px 4px` — tight padding for full-bleed content (the globe) |
+| `compact` | `padding: 2px 4px` — tight padding for full-bleed content (the featured monitor) |
 | `bleed` | `padding: 0` — the widget body owns all inner spacing (bottom widgets); the title keeps its own inset |
 
 Widgets tile with **no divider lines** between sections. These flags are set
