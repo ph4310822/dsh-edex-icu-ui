@@ -1,0 +1,177 @@
+{
+  "url": "http://127.0.0.1:3085/",
+  "shellPresent": true,
+  "timedOut": false,
+  "pageTitle": "DSH Local Build",
+  "errors": [],
+  "computedStyles": {
+    "--edex-green": "#37ff71",
+    "--edex-border": "#1e2a34",
+    "--edex-panel-2": "#0f181d",
+    "--dsw-alias-label-primary": "#eaf4fd",
+    "--dsw-alias-border-l1": "#1e2a34",
+    "bodyBackground": "rgb(4, 6, 9)",
+    "shellPresent": true,
+    "shellDisplay": "block",
+    "shellBg": "rgba(0, 0, 0, 0)",
+    "panels": {
+      "left": {
+        "borderWidth": "0px",
+        "borderStyle": "none",
+        "borderColor": "rgb(55, 255, 113)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "margin": "0px"
+      },
+      "right": {
+        "borderWidth": "0px",
+        "borderStyle": "none",
+        "borderColor": "rgb(55, 255, 113)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "margin": "0px"
+      },
+      "bottom": {
+        "borderWidth": "0px",
+        "borderStyle": "none",
+        "borderColor": "rgb(55, 255, 113)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "margin": "0px"
+      },
+      "top": {
+        "borderWidth": "0px",
+        "borderStyle": "none",
+        "borderColor": "rgb(55, 255, 113)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "backgroundColor": "rgb(4, 6, 9)",
+        "margin": "0px"
+      }
+    },
+    "widgets": {
+      "info": {
+        "borderWidth": "1px",
+        "borderStyle": "solid",
+        "borderColor": "rgb(30, 42, 52)",
+        "borderRadius": "6px",
+        "boxShadow": "none",
+        "backgroundColor": "rgb(15, 24, 29)",
+        "margin": "6px"
+      },
+      "cpu": {
+        "borderWidth": "1px",
+        "borderStyle": "solid",
+        "borderColor": "rgb(30, 42, 52)",
+        "borderRadius": "6px",
+        "boxShadow": "none",
+        "backgroundColor": "rgb(15, 24, 29)",
+        "margin": "6px"
+      },
+      "processes": {
+        "borderWidth": "1px",
+        "borderStyle": "solid",
+        "borderColor": "rgb(30, 42, 52)",
+        "borderRadius": "6px",
+        "boxShadow": "none",
+        "backgroundColor": "rgb(15, 24, 29)",
+        "margin": "6px"
+      },
+      "network-status": {
+        "borderWidth": "1px",
+        "borderStyle": "solid",
+        "borderColor": "rgb(30, 42, 52)",
+        "borderRadius": "6px",
+        "boxShadow": "none",
+        "backgroundColor": "rgb(15, 24, 29)",
+        "margin": "6px"
+      },
+      "patient-monitor": {
+        "borderWidth": "1px",
+        "borderStyle": "solid",
+        "borderColor": "rgb(30, 42, 52)",
+        "borderRadius": "6px",
+        "boxShadow": "none",
+        "backgroundColor": "rgb(15, 24, 29)",
+        "margin": "6px"
+      },
+      "traffic": {
+        "borderWidth": "1px",
+        "borderStyle": "solid",
+        "borderColor": "rgb(30, 42, 52)",
+        "borderRadius": "6px",
+        "boxShadow": "none",
+        "backgroundColor": "rgb(15, 24, 29)",
+        "margin": "6px"
+      },
+      "files": {
+        "borderWidth": "1px",
+        "borderStyle": "solid",
+        "borderColor": "rgb(30, 42, 52)",
+        "borderRadius": "6px",
+        "boxShadow": "none",
+        "backgroundColor": "rgb(15, 24, 29)",
+        "margin": "6px"
+      },
+      "preview": {
+        "borderWidth": "1px",
+        "borderStyle": "solid",
+        "borderColor": "rgb(30, 42, 52)",
+        "borderRadius": "6px",
+        "boxShadow": "none",
+        "backgroundColor": "rgb(15, 24, 29)",
+        "margin": "6px"
+      },
+      "terminal": {
+        "borderWidth": "1px",
+        "borderStyle": "solid",
+        "borderColor": "rgb(30, 42, 52)",
+        "borderRadius": "6px",
+        "boxShadow": "none",
+        "backgroundColor": "rgb(15, 24, 29)",
+        "margin": "6px"
+      },
+      "center": {
+        "borderWidth": "0px",
+        "borderStyle": "none",
+        "borderColor": "rgb(55, 255, 113)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "margin": "0px"
+      }
+    },
+    "workspace": {
+      "sidebar": true,
+      "conversation": true,
+      "composer": true,
+      "center": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "borderWidth": "0px",
+        "borderStyle": "none",
+        "margin": "0px",
+        "visibility": "visible"
+      }
+    },
+    "workspacePresent": true,
+    "worldViewGone": true,
+    "widgetIds": [
+      "info",
+      "cpu",
+      "processes",
+      "network-status",
+      "patient-monitor",
+      "traffic",
+      "files",
+      "preview",
+      "terminal",
+      "center"
+    ]
+  },
+  "workspacePresent": true,
+  "screenshot": "/Users/daniel/workspace/arisos/dsh-edex-ui-icu/review-shot.png",
+  "probedAt": "2026-09-09T07:29:53.014Z"
+}

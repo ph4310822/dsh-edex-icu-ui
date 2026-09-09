@@ -69,10 +69,18 @@
   min-height: 0;
 }
 
+/* Numerics: pin the big value so the readout column never reflows as the
+   digits change. */
+.readValueGreen,
+.readValueCyan,
+.readValueYellow {
+  min-width: 2ch;
+}
+
 .laneRow {
   flex: 1;
   display: flex;
-  min-height: 0;
+  min-height: 52px;
   border-bottom: 1px solid #1a262e;
 }
 

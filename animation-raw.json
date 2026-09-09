@@ -1,0 +1,725 @@
+{
+  "url": "http://127.0.0.1:3085/",
+  "errors": [],
+  "environment": {
+    "reducedMotion": false,
+    "shellAnimatedCount": 8
+  },
+  "inventory": [
+    {
+      "desc": "span.npF.TW_vitalValue npF",
+      "testid": null,
+      "animationName": "npFsTW_vitals-value-pulse",
+      "transitionProperty": "all",
+      "infinite": true,
+      "rotation": false
+    },
+    {
+      "desc": "span.npF.TW_vitalValue npF",
+      "testid": null,
+      "animationName": "npFsTW_vitals-value-pulse",
+      "transitionProperty": "all",
+      "infinite": true,
+      "rotation": false
+    },
+    {
+      "desc": "span.npF.TW_vitalValue npF",
+      "testid": null,
+      "animationName": "npFsTW_vitals-value-pulse",
+      "transitionProperty": "all",
+      "infinite": true,
+      "rotation": false
+    },
+    {
+      "desc": "span.npF.TW_vitalValue npF",
+      "testid": null,
+      "animationName": "npFsTW_vitals-value-pulse",
+      "transitionProperty": "all",
+      "infinite": true,
+      "rotation": false
+    },
+    {
+      "desc": "span.npF.TW_vitalValue npF",
+      "testid": null,
+      "animationName": "npFsTW_vitals-value-pulse",
+      "transitionProperty": "all",
+      "infinite": true,
+      "rotation": false
+    },
+    {
+      "desc": "div..cTKRG_readValueGreen",
+      "testid": null,
+      "animationName": "scTKRG_monitor-value-pulse",
+      "transitionProperty": "all",
+      "infinite": true,
+      "rotation": false
+    },
+    {
+      "desc": "div..cTKRG_readValueCyan",
+      "testid": null,
+      "animationName": "scTKRG_monitor-value-pulse",
+      "transitionProperty": "all",
+      "infinite": true,
+      "rotation": false
+    },
+    {
+      "desc": "div..cTKRG_readValueYellow",
+      "testid": null,
+      "animationName": "scTKRG_monitor-value-pulse",
+      "transitionProperty": "all",
+      "infinite": true,
+      "rotation": false
+    }
+  ],
+  "results": {
+    "anim_1": {
+      "desc": "span.npF.TW_vitalValue npF",
+      "testid": null,
+      "animationName": "npFsTW_vitals-value-pulse",
+      "transitionProperty": "all",
+      "infinite": true,
+      "rotation": false,
+      "samples": [
+        {
+          "angle": null,
+          "opacity": "1",
+          "transform": "none",
+          "playState": "running",
+          "aabbCenter": {
+            "x": 162,
+            "y": 274.09375
+          }
+        },
+        {
+          "angle": null,
+          "opacity": "0.85",
+          "transform": "none",
+          "playState": "running",
+          "aabbCenter": {
+            "x": 162,
+            "y": 274.09375
+          }
+        },
+        {
+          "angle": null,
+          "opacity": "0.85",
+          "transform": "none",
+          "playState": "running",
+          "aabbCenter": {
+            "x": 162,
+            "y": 274.09375
+          }
+        },
+        {
+          "angle": null,
+          "opacity": "1",
+          "transform": "none",
+          "playState": "running",
+          "aabbCenter": {
+            "x": 162,
+            "y": 274.09375
+          }
+        },
+        {
+          "angle": null,
+          "opacity": "1",
+          "transform": "none",
+          "playState": "running",
+          "aabbCenter": {
+            "x": 162,
+            "y": 274.09375
+          }
+        },
+        {
+          "angle": null,
+          "opacity": "0.85",
+          "transform": "none",
+          "playState": "running",
+          "aabbCenter": {
+            "x": 162,
+            "y": 274.09375
+          }
+        }
+      ],
+      "changed": true,
+      "running": true,
+      "duration": "2s",
+      "iteration": "infinite",
+      "rate": null,
+      "direction": null,
+      "rateOk": true,
+      "pivotDrift": null,
+      "pivotOk": true,
+      "extentOk": true
+    },
+    "anim_2": {
+      "desc": "span.npF.TW_vitalValue npF",
+      "testid": null,
+      "animationName": "npFsTW_vitals-value-pulse",
+      "transitionProperty": "all",
+      "infinite": true,
+      "rotation": false,
+      "samples": [
+        {
+          "angle": null,
+          "opacity": "1",
+          "transform": "none",
+          "playState": "running",
+          "aabbCenter": {
+            "x": 162,
+            "y": 320.78125
+          }
+        },
+        {
+          "angle": null,
+          "opacity": "0.85",
+          "transform": "none",
+          "playState": "running",
+          "aabbCenter": {
+            "x": 162,
+            "y": 320.78125
+          }
+        },
+        {
+          "angle": null,
+          "opacity": "0.85",
+          "transform": "none",
+          "playState": "running",
+          "aabbCenter": {
+            "x": 162,
+            "y": 320.78125
+          }
+        },
+        {
+          "angle": null,
+          "opacity": "1",
+          "transform": "none",
+          "playState": "running",
+          "aabbCenter": {
+            "x": 162,
+            "y": 320.78125
+          }
+        },
+        {
+          "angle": null,
+          "opacity": "1",
+          "transform": "none",
+          "playState": "running",
+          "aabbCenter": {
+            "x": 162,
+            "y": 320.78125
+          }
+        },
+        {
+          "angle": null,
+          "opacity": "0.85",
+          "transform": "none",
+          "playState": "running",
+          "aabbCenter": {
+            "x": 162,
+            "y": 320.78125
+          }
+        }
+      ],
+      "changed": true,
+      "running": true,
+      "duration": "2s",
+      "iteration": "infinite",
+      "rate": null,
+      "direction": null,
+      "rateOk": true,
+      "pivotDrift": null,
+      "pivotOk": true,
+      "extentOk": true
+    },
+    "anim_3": {
+      "desc": "span.npF.TW_vitalValue npF",
+      "testid": null,
+      "animationName": "npFsTW_vitals-value-pulse",
+      "transitionProperty": "all",
+      "infinite": true,
+      "rotation": false,
+      "samples": [
+        {
+          "angle": null,
+          "opacity": "1",
+          "transform": "none",
+          "playState": "running",
+          "aabbCenter": {
+            "x": 162,
+            "y": 367.46875
+          }
+        },
+        {
+          "angle": null,
+          "opacity": "0.85",
+          "transform": "none",
+          "playState": "running",
+          "aabbCenter": {
+            "x": 162,
+            "y": 367.46875
+          }
+        },
+        {
+          "angle": null,
+          "opacity": "0.85",
+          "transform": "none",
+          "playState": "running",
+          "aabbCenter": {
+            "x": 162,
+            "y": 367.46875
+          }
+        },
+        {
+          "angle": null,
+          "opacity": "1",
+          "transform": "none",
+          "playState": "running",
+          "aabbCenter": {
+            "x": 162,
+            "y": 367.46875
+          }
+        },
+        {
+          "angle": null,
+          "opacity": "1",
+          "transform": "none",
+          "playState": "running",
+          "aabbCenter": {
+            "x": 162,
+            "y": 367.46875
+          }
+        },
+        {
+          "angle": null,
+          "opacity": "0.85",
+          "transform": "none",
+          "playState": "running",
+          "aabbCenter": {
+            "x": 162,
+            "y": 367.46875
+          }
+        }
+      ],
+      "changed": true,
+      "running": true,
+      "duration": "2s",
+      "iteration": "infinite",
+      "rate": null,
+      "direction": null,
+      "rateOk": true,
+      "pivotDrift": null,
+      "pivotOk": true,
+      "extentOk": true
+    },
+    "anim_4": {
+      "desc": "span.npF.TW_vitalValue npF",
+      "testid": null,
+      "animationName": "npFsTW_vitals-value-pulse",
+      "transitionProperty": "all",
+      "infinite": true,
+      "rotation": false,
+      "samples": [
+        {
+          "angle": null,
+          "opacity": "1",
+          "transform": "none",
+          "playState": "running",
+          "aabbCenter": {
+            "x": 162,
+            "y": 414.15625
+          }
+        },
+        {
+          "angle": null,
+          "opacity": "0.85",
+          "transform": "none",
+          "playState": "running",
+          "aabbCenter": {
+            "x": 162,
+            "y": 414.15625
+          }
+        },
+        {
+          "angle": null,
+          "opacity": "0.85",
+          "transform": "none",
+          "playState": "running",
+          "aabbCenter": {
+            "x": 162,
+            "y": 414.15625
+          }
+        },
+        {
+          "angle": null,
+          "opacity": "1",
+          "transform": "none",
+          "playState": "running",
+          "aabbCenter": {
+            "x": 162,
+            "y": 414.15625
+          }
+        },
+        {
+          "angle": null,
+          "opacity": "1",
+          "transform": "none",
+          "playState": "running",
+          "aabbCenter": {
+            "x": 162,
+            "y": 414.15625
+          }
+        },
+        {
+          "angle": null,
+          "opacity": "0.85",
+          "transform": "none",
+          "playState": "running",
+          "aabbCenter": {
+            "x": 162,
+            "y": 414.15625
+          }
+        }
+      ],
+      "changed": true,
+      "running": true,
+      "duration": "2s",
+      "iteration": "infinite",
+      "rate": null,
+      "direction": null,
+      "rateOk": true,
+      "pivotDrift": null,
+      "pivotOk": true,
+      "extentOk": true
+    },
+    "anim_5": {
+      "desc": "span.npF.TW_vitalValue npF",
+      "testid": null,
+      "animationName": "npFsTW_vitals-value-pulse",
+      "transitionProperty": "all",
+      "infinite": true,
+      "rotation": false,
+      "samples": [
+        {
+          "angle": null,
+          "opacity": "1",
+          "transform": "none",
+          "playState": "running",
+          "aabbCenter": {
+            "x": 162,
+            "y": 460.84375
+          }
+        },
+        {
+          "angle": null,
+          "opacity": "0.85",
+          "transform": "none",
+          "playState": "running",
+          "aabbCenter": {
+            "x": 162,
+            "y": 460.84375
+          }
+        },
+        {
+          "angle": null,
+          "opacity": "0.85",
+          "transform": "none",
+          "playState": "running",
+          "aabbCenter": {
+            "x": 162,
+            "y": 460.84375
+          }
+        },
+        {
+          "angle": null,
+          "opacity": "1",
+          "transform": "none",
+          "playState": "running",
+          "aabbCenter": {
+            "x": 162,
+            "y": 460.84375
+          }
+        },
+        {
+          "angle": null,
+          "opacity": "1",
+          "transform": "none",
+          "playState": "running",
+          "aabbCenter": {
+            "x": 162,
+            "y": 460.84375
+          }
+        },
+        {
+          "angle": null,
+          "opacity": "0.85",
+          "transform": "none",
+          "playState": "running",
+          "aabbCenter": {
+            "x": 162,
+            "y": 460.84375
+          }
+        }
+      ],
+      "changed": true,
+      "running": true,
+      "duration": "2s",
+      "iteration": "infinite",
+      "rate": null,
+      "direction": null,
+      "rateOk": true,
+      "pivotDrift": null,
+      "pivotOk": true,
+      "extentOk": true
+    },
+    "anim_6": {
+      "desc": "div..cTKRG_readValueGreen",
+      "testid": null,
+      "animationName": "scTKRG_monitor-value-pulse",
+      "transitionProperty": "all",
+      "infinite": true,
+      "rotation": false,
+      "samples": [
+        {
+          "angle": null,
+          "opacity": "1",
+          "transform": "none",
+          "playState": "running",
+          "aabbCenter": {
+            "x": 1502.546875,
+            "y": 241.5078125
+          }
+        },
+        {
+          "angle": null,
+          "opacity": "0.82",
+          "transform": "none",
+          "playState": "running",
+          "aabbCenter": {
+            "x": 1502.546875,
+            "y": 241.5078125
+          }
+        },
+        {
+          "angle": null,
+          "opacity": "0.82",
+          "transform": "none",
+          "playState": "running",
+          "aabbCenter": {
+            "x": 1502.546875,
+            "y": 241.5078125
+          }
+        },
+        {
+          "angle": null,
+          "opacity": "1",
+          "transform": "none",
+          "playState": "running",
+          "aabbCenter": {
+            "x": 1502.546875,
+            "y": 241.5078125
+          }
+        },
+        {
+          "angle": null,
+          "opacity": "1",
+          "transform": "none",
+          "playState": "running",
+          "aabbCenter": {
+            "x": 1502.546875,
+            "y": 241.5078125
+          }
+        },
+        {
+          "angle": null,
+          "opacity": "0.82",
+          "transform": "none",
+          "playState": "running",
+          "aabbCenter": {
+            "x": 1502.546875,
+            "y": 241.5078125
+          }
+        }
+      ],
+      "changed": true,
+      "running": true,
+      "duration": "2s",
+      "iteration": "infinite",
+      "rate": null,
+      "direction": null,
+      "rateOk": true,
+      "pivotDrift": null,
+      "pivotOk": true,
+      "extentOk": true
+    },
+    "anim_7": {
+      "desc": "div..cTKRG_readValueCyan",
+      "testid": null,
+      "animationName": "scTKRG_monitor-value-pulse",
+      "transitionProperty": "all",
+      "infinite": true,
+      "rotation": false,
+      "samples": [
+        {
+          "angle": null,
+          "opacity": "1",
+          "transform": "none",
+          "playState": "running",
+          "aabbCenter": {
+            "x": 1502.546875,
+            "y": 269.0078125
+          }
+        },
+        {
+          "angle": null,
+          "opacity": "0.82",
+          "transform": "none",
+          "playState": "running",
+          "aabbCenter": {
+            "x": 1502.546875,
+            "y": 269.0078125
+          }
+        },
+        {
+          "angle": null,
+          "opacity": "0.82",
+          "transform": "none",
+          "playState": "running",
+          "aabbCenter": {
+            "x": 1502.546875,
+            "y": 269.0078125
+          }
+        },
+        {
+          "angle": null,
+          "opacity": "1",
+          "transform": "none",
+          "playState": "running",
+          "aabbCenter": {
+            "x": 1502.546875,
+            "y": 269.0078125
+          }
+        },
+        {
+          "angle": null,
+          "opacity": "1",
+          "transform": "none",
+          "playState": "running",
+          "aabbCenter": {
+            "x": 1502.546875,
+            "y": 269.0078125
+          }
+        },
+        {
+          "angle": null,
+          "opacity": "0.82",
+          "transform": "none",
+          "playState": "running",
+          "aabbCenter": {
+            "x": 1502.546875,
+            "y": 269.0078125
+          }
+        }
+      ],
+      "changed": true,
+      "running": true,
+      "duration": "2s",
+      "iteration": "infinite",
+      "rate": null,
+      "direction": null,
+      "rateOk": true,
+      "pivotDrift": null,
+      "pivotOk": true,
+      "extentOk": true
+    },
+    "anim_8": {
+      "desc": "div..cTKRG_readValueYellow",
+      "testid": null,
+      "animationName": "scTKRG_monitor-value-pulse",
+      "transitionProperty": "all",
+      "infinite": true,
+      "rotation": false,
+      "samples": [
+        {
+          "angle": null,
+          "opacity": "1",
+          "transform": "none",
+          "playState": "running",
+          "aabbCenter": {
+            "x": 1502.546875,
+            "y": 296.5078125
+          }
+        },
+        {
+          "angle": null,
+          "opacity": "0.82",
+          "transform": "none",
+          "playState": "running",
+          "aabbCenter": {
+            "x": 1502.546875,
+            "y": 296.5078125
+          }
+        },
+        {
+          "angle": null,
+          "opacity": "0.82",
+          "transform": "none",
+          "playState": "running",
+          "aabbCenter": {
+            "x": 1502.546875,
+            "y": 296.5078125
+          }
+        },
+        {
+          "angle": null,
+          "opacity": "1",
+          "transform": "none",
+          "playState": "running",
+          "aabbCenter": {
+            "x": 1502.546875,
+            "y": 296.5078125
+          }
+        },
+        {
+          "angle": null,
+          "opacity": "1",
+          "transform": "none",
+          "playState": "running",
+          "aabbCenter": {
+            "x": 1502.546875,
+            "y": 296.5078125
+          }
+        },
+        {
+          "angle": null,
+          "opacity": "0.82",
+          "transform": "none",
+          "playState": "running",
+          "aabbCenter": {
+            "x": 1502.546875,
+            "y": 296.5078125
+          }
+        }
+      ],
+      "changed": true,
+      "running": true,
+      "duration": "2s",
+      "iteration": "infinite",
+      "rate": null,
+      "direction": null,
+      "rateOk": true,
+      "pivotDrift": null,
+      "pivotOk": true,
+      "extentOk": true
+    }
+  },
+  "verdict": {
+    "errorsZero": true,
+    "running": true,
+    "rateOk": true,
+    "pivotOk": true,
+    "extentOk": true,
+    "pass": true
+  },
+  "probedAt": "2026-09-09T07:43:30.693Z"
+}
