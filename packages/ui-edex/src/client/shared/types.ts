@@ -8,7 +8,7 @@
 import type { RemoteResult } from '@deepseek-ai/dsh-typert-protocol'
 import type {
   CommandResult, DirectoryListing, FilePreview, HardwareInfo, NetworkInfo, ProcessSample, StorageInfo, SystemOverview, WriteResult,
-} from '@danielng23/dsh-host-system-metrics/types'
+} from '@danielng23/dsh-icu-host-system-metrics/types'
 
 export type { FilePreview }
 

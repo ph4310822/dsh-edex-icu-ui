@@ -1,13 +1,13 @@
 {
-  "name": "@danielng23/dsh-client-ui-edex",
-  "description": "eDEX-UI style shell frame over the web client: system telemetry left bar, network/world-view right bar, filesystem browser bottom-left, original UI centered",
+  "name": "@danielng23/dsh-icu-client-ui-edex",
+  "description": "eDEX-UI DSH theme variant - ICU patient monitor (SimVitals reference): clinical-green ECG monitor shell with animated waveform featured widget",
   "version": "0.1.0",
   "publishConfig": {
     "access": "public"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ph4310822/dsh-edex-ui.git",
+    "url": "git+https://github.com/ph4310822/dsh-edex-icu-ui.git",
     "directory": "packages/ui-edex"
   },
   "type": "module",
@@ -60,7 +60,6 @@
     "react": "^18.2.0"
   },
   "peerDependencies": {
-    "@danielng23/dsh-host-system-metrics": "*",
     "@deepseek-ai/dsh-api-remotes": "*",
     "@deepseek-ai/dsh-client-locale": "*",
     "@deepseek-ai/dsh-client-runtime": "*",
@@ -74,7 +73,8 @@
     "@deepseek-ai/schemastery": "*",
     "@deepseek-ai/cordis": "*",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "@danielng23/dsh-icu-host-system-metrics": "*"
   },
   "devDependencies": {
     "@deepseek-ai/dsh-api-remotes": "*",
@@ -84,13 +84,13 @@
     "@deepseek-ai/dsh-client-ui-settings": "*",
     "@deepseek-ai/dsh-client-ui-slots": "*",
     "@deepseek-ai/dsh-client-ui-theme": "*",
-    "@danielng23/dsh-host-system-metrics": "*",
     "@deepseek-ai/dsh-invariants": "*",
     "@deepseek-ai/dsh-typert-protocol": "*",
     "@deepseek-ai/cordis": "*",
     "@types/react": "~18.3.1",
     "@types/react-dom": "~18.3.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "@danielng23/dsh-icu-host-system-metrics": "*"
   }
 }

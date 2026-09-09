@@ -25,7 +25,7 @@ import type {} from '@deepseek-ai/dsh-client-ui-settings/client'
 // Type-only: pulls the locale plugin's Context merge (ctx.locale).
 import type {} from '@deepseek-ai/dsh-client-locale/client'
 // The generated Host Remote contribution; mounted in apply (inlined at build).
-import systemMetricsRemote from '@danielng23/dsh-host-system-metrics/remote'
+import systemMetricsRemote from '@danielng23/dsh-icu-host-system-metrics/remote'
 import {
   DEFAULT_THEME_COLOR, EDEX_SETTINGS_NAMESPACE, THEME_COLOR_FIELD,
   bodyVarsFor, normalizeHex, paletteFor, tokenOverridesFor, type EdexSettings,
@@ -34,7 +34,7 @@ import { EdexShell, type EdexShellInjected } from './frame/EdexShell.tsx'
 import { FilesController } from './shared/files.ts'
 import { EdexPoller } from './shared/monitor.ts'
 import type { ObservableSource, SystemMetricsRemote } from './shared/types.ts'
-import type { CommandResult } from '@danielng23/dsh-host-system-metrics/types'
+import type { CommandResult } from '@danielng23/dsh-icu-host-system-metrics/types'
 import { ThemeColorRow, type ThemeColorRowInjected } from './settings/ThemeColorRow.tsx'
 import { NS, zh, en } from './settings/locales.ts'
 

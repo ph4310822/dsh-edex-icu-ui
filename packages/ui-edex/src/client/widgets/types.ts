@@ -7,7 +7,7 @@
  */
 import type { ComponentType } from 'react'
 import type { SnapshotSelectorHook } from '@deepseek-ai/dsh-client-ui-slots'
-import type { CommandResult } from '@danielng23/dsh-host-system-metrics/types'
+import type { CommandResult } from '@danielng23/dsh-icu-host-system-metrics/types'
 import type { FilesState, NetworkSnapshot, PanelSnapshot } from '../shared/types.ts'
 
 /** Hooks handed to every left-panel widget. */

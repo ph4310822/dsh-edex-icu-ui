@@ -3,7 +3,7 @@ import type {
   RemoteResult,
   TypertRemoteContribution,
 } from '@deepseek-ai/dsh-typert-protocol'
-import type { CommandResult, DirectoryListing, FilePreview, SystemMetricsSnapshot, SystemOverview, WriteResult } from '@danielng23/dsh-host-system-metrics/types'
+import type { CommandResult, DirectoryListing, FilePreview, SystemMetricsSnapshot, SystemOverview, WriteResult } from '@danielng23/dsh-icu-host-system-metrics/types'
 
 declare module '@deepseek-ai/dsh-typert-protocol' {
   interface TypertRemoteNamespace$73797374656d4d657472696373 {

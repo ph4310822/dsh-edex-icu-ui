@@ -5,7 +5,7 @@
  * Same `processes` hook slice; only the presentation changed (match: partial
  * per analysis).
  */
-import type { ProcessSample } from '@danielng23/dsh-host-system-metrics/types'
+import type { ProcessSample } from '@danielng23/dsh-icu-host-system-metrics/types'
 import type { LeftWidgetHooks } from '../../widgets/types.ts'
 import css from './ProcessWidget.module.css'
 
