@@ -15,7 +15,7 @@ import css from './LeftBar.module.css'
 /** The left panel's widget composition (top to bottom). */
 const LEFT_WIDGETS: LeftWidgetSlot[] = [
   { id: 'info', Component: InfoWidget },
-  { id: 'cpu', title: 'CPU', Component: CpuWidget },
+  { id: 'cpu', title: 'SYSTEM VITALS', Component: CpuWidget },
   // Flex-fills the leftover bar height so the table runs into the loadavg
   // footer the widget itself renders.
   { id: 'processes', title: 'PROCESSES', fill: true, Component: ProcessWidget },

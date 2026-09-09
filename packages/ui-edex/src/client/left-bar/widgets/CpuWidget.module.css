@@ -1,90 +1,89 @@
-/* CPU widget: per-core sparklines, metric row, memory/swap bars. */
+/* SYSTEM VITALS widget: the reference's numeric-column language — colored
+   label, big value, muted limits; divider rows between lanes (analysis
+   borderFeatures.dividers: thin blue-gray rules). */
 
-.cpuPairs {
+.vitals {
   display: flex;
   flex-direction: column;
-  gap: 3px;
-  margin-bottom: 8px;
+  min-height: 0;
 }
 
-.cpuPair {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+.vitalRow {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  grid-template-areas:
+    'label value'
+    'label sub';
+  align-items: baseline;
+  column-gap: 8px;
+  padding: 4px 0;
+  border-bottom: 1px solid #1a262e;
 }
 
-.cpuLabel {
-  width: 38px;
-  color: var(--edex-dim);
-  flex: none;
+.vitalRow:last-of-type {
+  border-bottom: none;
 }
 
-.cpuPct {
-  width: 42px;
-  text-align: right;
-  flex: none;
+.vitalLabel {
+  grid-area: label;
+  font-size: 10px;
+  letter-spacing: 1px;
 }
 
-.spark {
-  flex: 1;
-  min-width: 0;
-  width: 100%;
-  color: var(--edex-cyan);
+.vitalValue {
+  grid-area: value;
+  font-size: 22px;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
 }
 
-.metricRow {
-  display: flex;
-  justify-content: space-between;
-  gap: 6px;
-  margin-bottom: 10px;
+.vitalSub {
+  grid-area: sub;
+  font-size: 9px;
+  color: #7f96a8;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.metric {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2px;
-  flex: 1;
-}
+.green { color: #37ff71; }
+.cyan { color: #29dfff; }
+.yellow { color: #ffd34e; }
 
-.metricKey {
-  color: var(--edex-dim);
-}
-
-.memBlock {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.memLabel {
+/* Load footer: muted auxiliary line like the reference's limit text. */
+.loadLine {
   display: flex;
   justify-content: space-between;
   gap: 8px;
-  color: var(--edex-dim);
+  margin-top: 6px;
+  padding-top: 6px;
+  border-top: 1px solid #1a262e;
 }
 
-.memPct {
-  color: var(--edex-green);
+.loadKey {
+  color: #7f96a8;
+  letter-spacing: 1px;
 }
 
-.blockBar {
-  display: flex;
-  gap: 2px;
-  height: 10px;
+.loadValue {
+  color: #eaf4fd;
+  font-variant-numeric: tabular-nums;
 }
 
-.blockOn,
-.blockOff {
-  flex: 1;
+/* Value cells pulse subtly like a monitor refreshing samples; static under
+   prefers-reduced-motion. */
+.vitalValue {
+  animation: vitals-value-pulse 2s steps(2, jump-none) infinite;
 }
 
-.blockOn {
-  background: var(--edex-green);
-  box-shadow: 0 0 6px color-mix(in srgb, var(--edex-green) 50%, transparent);
+@keyframes vitals-value-pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.85; }
+  100% { opacity: 1; }
 }
 
-.blockOff {
-  background: var(--edex-border);
-  opacity: 0.4;
+@media (prefers-reduced-motion: reduce) {
+  .vitalValue {
+    animation: none;
+  }
 }

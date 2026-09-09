@@ -1,4 +1,25 @@
-/* Network status widget: interface state readout. */
+/* Network status widget: bed-status line (green bed id, muted mode) above
+   the interface spec lines — muted keys, white values, green/red state. */
+
+.bedLine {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 4px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #1a262e;
+}
+
+.bedId {
+  color: #37ff71;
+  letter-spacing: 1px;
+}
+
+.bedMode {
+  color: #7f96a8;
+  font-size: 9px;
+  letter-spacing: 1px;
+}
 
 .specLine {
   display: flex;
@@ -11,8 +32,17 @@
 .specLine > span:last-child {
   overflow: hidden;
   text-overflow: ellipsis;
+  color: #eaf4fd;
 }
 
 .key {
   color: var(--edex-dim);
+}
+
+.valueOk {
+  color: #37ff71;
+}
+
+.valueAlert {
+  color: #d84351;
 }

@@ -1,4 +1,6 @@
-/* Process widget: scrollable top-processes table + loadavg footer. */
+/* Process widget: stacked scenario-card list (SimVitals sidebar language) +
+   loadavg footer. Cards: closed 1px blue-gray rectangles, 6px radius, slate
+   fill, white bold title, muted body (analysis borderFeatures.cards). */
 
 /* Scrollable body fills the section's leftover height; the scrollbar is
    hidden (mouse wheel / trackpad still scroll). */
@@ -7,47 +9,58 @@
   min-height: 0;
   overflow-y: auto;
   scrollbar-width: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .body::-webkit-scrollbar {
   display: none;
 }
 
-.procTable {
-  width: 100%;
-  border-collapse: collapse;
+.card {
+  flex: none;
+  padding: 6px 8px;
+  background: #0b1016;
+  border: 1px solid #1e2a34;
+  border-radius: 6px;
 }
 
-.procTable th {
-  text-align: left;
-  color: var(--edex-dim);
-  font-weight: normal;
-  padding-bottom: 2px;
+.cardTitleRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
 }
 
-.procTable td {
-  padding: 1px 0;
+.cardTitle {
+  color: #eaf4fd;
+  font-weight: 700;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.procName {
-  max-width: 0;
-  width: 100%;
+.cardCpu {
+  flex: none;
+  color: #37ff71;
+  font-variant-numeric: tabular-nums;
 }
 
-.num {
-  text-align: right;
-  width: 48px;
+.cardBody {
+  margin-top: 2px;
+  color: #7f96a8;
+  font-size: 9px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* The loadavg footer bleeds to the section edges (the section carries the
-   12px side padding) and also cancels the section's bottom padding, so the
-   box ends at the panel edge like the original standalone footer. */
+   8px side padding) and cancels the section's bottom padding. */
 .foot {
-  margin: auto -12px -10px;
-  padding: 8px 12px;
+  margin: 8px -8px -8px;
+  padding: 8px 8px;
   border-top: 1px solid var(--edex-border);
 }
 

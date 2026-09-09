@@ -1,45 +1,35 @@
 /**
- * Process widget: the top-processes table (scrolls to fill the leftover bar
- * height) with the loadavg footer pinned beneath it.
+ * PROCESS widget (SimVitals reference): the top-processes table restyled as
+ * the sidebar's stacked scenario-card list — selectable-looking dark slate
+ * cards with a bold title line and a muted detail line, one per process.
+ * Same `processes` hook slice; only the presentation changed (match: partial
+ * per analysis).
  */
 import type { ProcessSample } from '@danielng23/dsh-host-system-metrics/types'
 import type { LeftWidgetHooks } from '../../widgets/types.ts'
 import css from './ProcessWidget.module.css'
 
-/** Top-processes table. */
-function ProcessTable({ processes }: { processes: readonly ProcessSample[] }) {
+/** One scenario-style card for a process. */
+function ScenarioCard({ proc }: { proc: ProcessSample }) {
   return (
-    <table className={css.procTable}>
-      <thead>
-        <tr>
-          <th>PID</th>
-          <th>NAME</th>
-          <th className={css.num}>CPU%</th>
-          <th className={css.num}>MEM%</th>
-        </tr>
-      </thead>
-      <tbody>
-        {processes.map(proc => (
-          <tr key={proc.pid}>
-            <td>{proc.pid}</td>
-            <td className={css.procName}>{proc.name}</td>
-            <td className={css.num}>{proc.cpuPct.toFixed(1)}</td>
-            <td className={css.num}>{proc.memPct.toFixed(1)}</td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
+    <div className={css.card}>
+      <div className={css.cardTitleRow}>
+        <span className={css.cardTitle}>{proc.name}</span>
+        <span className={css.cardCpu}>{proc.cpuPct.toFixed(1)}%</span>
+      </div>
+      <div className={css.cardBody}>pid {proc.pid} · mem {proc.memPct.toFixed(1)}%</div>
+    </div>
   )
 }
 
-/** Process widget: top processes table + loadavg footer. */
+/** Process widget: scenario-card list + loadavg footer. */
 export function ProcessWidget({ usePanel }: LeftWidgetHooks) {
   const processes = usePanel(s => s.processes)
   const loadavg = usePanel(s => s.loadavg)
   return (
     <>
       <div className={css.body}>
-        <ProcessTable processes={processes} />
+        {processes.map(proc => <ScenarioCard key={proc.pid} proc={proc} />)}
       </div>
       <div className={css.foot}>
         <span className={css.footText}>loadavg {loadavg.map(value => value.toFixed(2)).join(' ')}</span>
