@@ -45,7 +45,7 @@ Each bar file declares its composition as a typed array:
 ```ts
 const LEFT_WIDGETS: LeftWidgetSlot[] = [
   { id: 'info', Component: InfoWidget },
-  { id: 'cpu', title: 'CPU', Component: CpuWidget },
+  { id: 'cpu', title: 'SYSTEM VITALS', Component: CpuWidget },
   { id: 'processes', title: 'PROCESSES', fill: true, Component: ProcessWidget },
 ]
 ```
@@ -56,7 +56,7 @@ const LEFT_WIDGETS: LeftWidgetSlot[] = [
 const RIGHT_WIDGETS: RightWidgetSlot[] = [
   { id: 'network-status', title: 'NETWORK STATUS', Component: NetworkStatusWidget },
   { id: 'patient-monitor', title: 'PATIENT MONITOR', compact: true, fill: true, Component: PatientMonitorWidget },
-  { id: 'traffic', title: 'TRAFFIC', fill: true, Component: TrafficWidget },
+  { id: 'traffic', title: 'TRAFFIC', Component: TrafficWidget },
 ]
 ```
 
