@@ -171,3 +171,14 @@ sets `fill: true`; the section chrome handles the layout, and the widget's own
 CSS only needs to manage its internal flex children. Bottom widgets use
 `fill: true` + `bleed: true` so their full-bleed bodies (file rows, editor,
 terminal output/input) stretch to the section's remaining height.
+
+## ICU data wiring notes
+
+The featured `PATIENT MONITOR` widget lives in the right bar and therefore
+consumes the right-bar hooks (`useNetwork`): the host's ping rhythm anchors
+HR, throughput jitter shifts SpO2, and the wall-clock cadence drives RR. The
+reference drives *simulated* vitals from its sidebar controls; this variant
+keeps every widget wired to live host data instead, so the lanes always sweep
+and the alarm band reflects the actual host link (`ALL CLEAR` steady, red
+`SIGNAL LOST` when the network snapshot drops). `SYSTEM VITALS` (left bar)
+remains on the `usePanel` telemetry slice it replaced.
