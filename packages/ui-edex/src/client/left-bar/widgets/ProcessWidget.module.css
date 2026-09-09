@@ -1,0 +1,56 @@
+/* Process widget: scrollable top-processes table + loadavg footer. */
+
+/* Scrollable body fills the section's leftover height; the scrollbar is
+   hidden (mouse wheel / trackpad still scroll). */
+.body {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+.body::-webkit-scrollbar {
+  display: none;
+}
+
+.procTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.procTable th {
+  text-align: left;
+  color: var(--edex-dim);
+  font-weight: normal;
+  padding-bottom: 2px;
+}
+
+.procTable td {
+  padding: 1px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.procName {
+  max-width: 0;
+  width: 100%;
+}
+
+.num {
+  text-align: right;
+  width: 48px;
+}
+
+/* The loadavg footer bleeds to the section edges (the section carries the
+   12px side padding) and also cancels the section's bottom padding, so the
+   box ends at the panel edge like the original standalone footer. */
+.foot {
+  margin: auto -12px -10px;
+  padding: 8px 12px;
+  border-top: 1px solid var(--edex-border);
+}
+
+.footText {
+  color: var(--edex-dim);
+}

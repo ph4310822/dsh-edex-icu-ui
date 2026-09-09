@@ -1,0 +1,18 @@
+/* Network status widget: interface state readout. */
+
+.specLine {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.specLine > span:last-child {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.key {
+  color: var(--edex-dim);
+}

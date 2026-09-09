@@ -1,0 +1,161 @@
+/* Files widget: directory-path title, entry list, storage bar (full-bleed
+   inside the bottom bar's files section — the chrome padding is dropped via
+   bleed, so the widget's own title carries the section-heading inset). */
+
+.root {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* The current directory as the section title — same look as the shared
+   chrome's title (amber, letter-spaced) with the .bleed .title inset. */
+.title {
+  flex: none;
+  padding: 10px 12px 0;
+  margin-bottom: 6px;
+  color: var(--edex-amber);
+  letter-spacing: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 10px 6px;
+  border-bottom: 1px solid var(--edex-border);
+  flex: none;
+}
+
+.upButton {
+  flex: none;
+  background: none;
+  border: 1px solid var(--edex-border);
+  color: var(--edex-green);
+  font-family: inherit;
+  font-size: 11px;
+  line-height: 1;
+  padding: 2px 6px;
+  cursor: pointer;
+}
+
+.upButton:hover {
+  background: var(--edex-panel-2);
+  border-color: var(--edex-green);
+}
+
+.list {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 4px 0;
+  scrollbar-width: thin;
+  scrollbar-color: var(--edex-green) var(--edex-panel-2);
+}
+
+.list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.list::-webkit-scrollbar-track {
+  background: var(--edex-panel-2);
+}
+
+.list::-webkit-scrollbar-thumb {
+  background: var(--edex-green);
+  border-radius: 3px;
+}
+
+/* One terminal-style list row: icon + name + DIR/FILE tag, full width. */
+.row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 3px 10px;
+  background: none;
+  border: none;
+  border-left: 2px solid transparent;
+  color: var(--edex-green);
+  font-family: inherit;
+  font-size: 11px;
+  text-align: left;
+  cursor: pointer;
+  min-width: 0;
+}
+
+.row:hover {
+  background: var(--edex-panel-2);
+}
+
+/* The selected (previewed) file row. */
+.row[data-selected] {
+  border-left-color: var(--edex-green);
+  background: color-mix(in srgb, var(--edex-green) 12%, transparent);
+}
+
+.icon {
+  flex: none;
+  display: inline-flex;
+  color: var(--edex-green);
+}
+
+.name {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.kind {
+  flex: none;
+  color: var(--edex-dim);
+  font-size: 9px;
+  letter-spacing: 0.14em;
+}
+
+.error {
+  color: var(--edex-red);
+  font-size: 10px;
+  padding: 4px 10px;
+}
+
+.hint {
+  color: var(--edex-dim);
+  padding: 4px 10px;
+}
+
+.storageRow {
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 6px 10px;
+  border-top: 1px solid var(--edex-border);
+}
+
+.storageText {
+  color: var(--edex-dim);
+  font-size: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.storageBar {
+  height: 8px;
+  background: var(--edex-border);
+  opacity: 0.6;
+}
+
+.storageFill {
+  height: 100%;
+  background: var(--edex-green);
+  box-shadow: 0 0 6px color-mix(in srgb, var(--edex-green) 50%, transparent);
+}

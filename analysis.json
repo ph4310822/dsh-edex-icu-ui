@@ -1,0 +1,130 @@
+{
+  "metadata": {
+    "filename": "reference-shot.png (web discovery capture) + reference-shot-live.png (steady-state re-capture)",
+    "url": "https://simvitals.diethos.com/",
+    "source": "vision",
+    "capturedViewport": "1600x900",
+    "note": "Web-discovered reference (direction: hospital ICU patient monitor). Initial capture showed a cardiac-arrest alarm state; a live re-capture with vitals params (?hr=78&spo2=97&...) shows the steady state (ALL CLEAR band, live traces confirmed by pixel measurement: 5.3k green + 5.4k cyan px in waveform lanes)."
+  },
+  "theme": {
+    "background": "#020405",
+    "panelTone": "#0f181d",
+    "canvas": "#040609",
+    "primaryAccent": "#37ff71",
+    "secondaryAccent": "#29dfff",
+    "textPrimary": "#eaf4fd",
+    "textSecondary": "#7f96a8",
+    "semanticColors": {
+      "success": "#37ff71",
+      "warn": "#ffd34e",
+      "error": "#d84351",
+      "info": "#29dfff"
+    },
+    "glowColor": "#37ff71"
+  },
+  "borderFeatures": {
+    "frame": {
+      "presence": "full",
+      "style": "solid",
+      "widthPx": 1,
+      "color": "#1e2a34",
+      "cornerRadiusPx": 8,
+      "glow": null,
+      "notes": "Monitor enclosure and header/sidebar panels: closed 1px blue-gray rectangles, ~8px radius, flat (no glow). Restrained squared clinical language."
+    },
+    "cards": {
+      "presence": "full",
+      "style": "solid",
+      "widthPx": 1,
+      "color": "#1e2a34",
+      "cornerRadiusPx": 6,
+      "glow": null,
+      "notes": "Scenario cards and sidebar cards: closed 1px blue-gray rectangles, 6-7px radius, dark slate fill (#0f181d family), no glow, no brackets."
+    },
+    "dividers": {
+      "presence": "full",
+      "style": "solid",
+      "widthPx": 1,
+      "color": "#1a262e",
+      "cornerRadiusPx": 0,
+      "glow": null,
+      "notes": "Thin subdued blue-gray rules separate waveform lanes and readout rows; fine ~1px gridlines (#16222b family) inside lanes."
+    },
+    "inputs": {
+      "presence": "full",
+      "style": "solid",
+      "widthPx": 1,
+      "color": "#1e2a34",
+      "cornerRadiusPx": 4,
+      "glow": null,
+      "notes": "Sidebar vital inputs: near-black fill (#0b1016), 1px blue-gray border, ~4px radius, bold near-white values."
+    },
+    "activeIndicators": {
+      "presence": "partial",
+      "style": "solid",
+      "widthPx": 1,
+      "color": "#29dfff",
+      "cornerRadiusPx": 0,
+      "glow": null,
+      "notes": "No left accent bars. Active/selected state = accent-colored text (green BED 04, checked controls pale blue #29dfff family, bright value blocks). Status colors carry state: green normal, cyan O2, yellow resp, red critical."
+    }
+  },
+  "layout": {
+    "regions": [
+      { "name": "appHeader", "topBar": true },
+      { "name": "monitorEnclosure", "cards": true, "gauges": true },
+      { "name": "waveformGrid", "leftColumn": true },
+      { "name": "numericColumn", "rightColumn": true },
+      { "name": "alarmBand", "topBar": true },
+      { "name": "controlsSidebar", "rightBar": true },
+      { "name": "scenarioCards", "rightBar": true }
+    ]
+  },
+  "keyElements": [
+    { "type": "waveform-lane", "description": "three stacked lanes (ECG II green, PLETH cyan, RESP/CO2 yellow) over a fine low-contrast blue-gray grid", "region": "monitor" },
+    { "type": "numeric-readout", "description": "right column per-lane: colored label, huge value, muted limit/unit text (HR 76 green, SpO2 96 cyan + PI, RR 14 yellow)", "region": "monitor" },
+    { "type": "alarm-band", "description": "full-width status band: blue-gray ALL CLEAR steady state, saturated red #d84351 band with white mono text in critical state", "region": "monitor" },
+    { "type": "bed-status-line", "description": "green BED 04, muted TRAINING / DEMO, right-aligned digital clock, fullscreen icon", "region": "monitor header" },
+    { "type": "input-grid", "description": "two-column labeled numeric inputs (HR, SpO2, Sys, Dia, RR, Temp, EtCO2, Speed)", "region": "rightSidebar" },
+    { "type": "card-list", "description": "stacked selectable clinical scenario cards (Stable post-op, Hypoxic resp. distress, ...)", "region": "rightSidebar" },
+    { "type": "header-panel", "description": "ECG logo tile (green/yellow/cyan), SIMULATION ONLY eyebrow, SimVitals title, Randomize + green Save PNG buttons", "region": "topBar" }
+  ],
+  "widgets": {
+    "reference": [
+      { "name": "ECG II WAVEFORM LANE", "type": "waveform", "region": "monitor", "description": "green ECG trace sweeping on a fine blue-gray grid lane" },
+      { "name": "PLETH WAVEFORM LANE", "type": "waveform", "region": "monitor", "description": "cyan plethysmography trace" },
+      { "name": "RESP / CO2 WAVEFORM LANE", "type": "waveform", "region": "monitor", "description": "yellow respiration/capnography trace" },
+      { "name": "HR NUMERIC READOUT", "type": "numeric-readout", "region": "monitor numeric column", "description": "green label + huge value + muted limits" },
+      { "name": "SpO2 NUMERIC READOUT", "type": "numeric-readout", "region": "monitor numeric column", "description": "cyan label/value + PI footer" },
+      { "name": "RR NUMERIC READOUT", "type": "numeric-readout", "region": "monitor numeric column", "description": "yellow label/value" },
+      { "name": "ALARM BAND", "type": "status-band", "region": "monitor", "description": "ALL CLEAR steady band / red critical band" },
+      { "name": "BED STATUS LINE", "type": "status-line", "region": "monitor header", "description": "BED id, mode text, clock" },
+      { "name": "CONTROLS SIDEBAR", "type": "input-grid", "region": "rightSidebar", "description": "labeled vital inputs + Alarm/Running toggles" },
+      { "name": "SCENARIO CARDS", "type": "card-list", "region": "rightSidebar", "description": "selectable clinical scenario cards" }
+    ],
+    "matches": [
+      { "reference": "HR/SpO2/RR NUMERIC READOUTS", "slot": "cpu", "match": "high" },
+      { "reference": "BED STATUS LINE", "slot": "network-status", "match": "partial" },
+      { "reference": "SCENARIO CARDS", "slot": "processes", "match": "partial" }
+    ],
+    "featured": {
+      "reference": "ECG II + PLETH + RESP/CO2 waveform lanes with numeric column",
+      "name": "PATIENT MONITOR",
+      "slot": "globe",
+      "description": "Multi-lane animated waveform monitor (green ECG, cyan pleth, yellow resp sweeps on fine grid) with per-lane numeric readouts and an alarm/status strip - the simulator's signature element; replaces the WORLD VIEW globe."
+    }
+  },
+  "measurements": {
+    "method": "vision_glance + vision_dominant_colors (steady-state + alarm captures) + analyze-ui.py + measure-accent2.py hue buckets",
+    "hueBuckets": {
+      "red": "#d84351",
+      "orange": "#f5ca4a",
+      "yellow": "#ffd34e",
+      "green": "#37ff71",
+      "cyan": "#29dfff",
+      "blue": "#1e2a34"
+    },
+    "alarmStateCapture": { "red": "#d84351", "band": "CARDIAC ARREST / NO BP / TEMP LOW" },
+    "steadyStateCapture": { "band": "ALL CLEAR", "numerics": "HR 76, SpO2 96, PI 10.0, RR 14" }
+  }
+}

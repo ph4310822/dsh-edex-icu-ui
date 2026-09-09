@@ -1,0 +1,130 @@
+/* Terminal widget: real shell commands through the systemMetrics runCommand
+   Remote, rendered in the shell's CRT palette (full-bleed inside the bottom
+   bar's TERMINAL section — the chrome padding is dropped via bleed). */
+
+.root {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  background: var(--edex-panel);
+  overflow: hidden;
+  cursor: text;
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 10px;
+  border-bottom: 1px solid var(--edex-border);
+  flex: none;
+}
+
+.barCwd {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--edex-amber);
+  font-size: 10px;
+}
+
+.barBusy {
+  flex: none;
+  color: var(--edex-cyan);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+}
+
+.scroll {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 6px 10px;
+  font-size: 12px;
+  line-height: 1.55;
+  user-select: text;
+  scrollbar-width: thin;
+  scrollbar-color: var(--edex-green) var(--edex-panel-2);
+}
+
+.scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scroll::-webkit-scrollbar-track {
+  background: var(--edex-panel-2);
+}
+
+.scroll::-webkit-scrollbar-thumb {
+  background: var(--edex-green);
+  border-radius: 3px;
+}
+
+/* Command echo: the typed line, bright on black. */
+.cmd {
+  color: var(--edex-green);
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* Command stdout: the shell's quieter green. */
+.out {
+  color: var(--edex-dim);
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* Command stderr and non-zero exits: the terminal's error red. */
+.err {
+  color: var(--edex-red);
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* Panel notices (welcome, help): the info cyan. */
+.info {
+  color: var(--edex-cyan);
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.prompt {
+  color: var(--edex-amber);
+  user-select: none;
+}
+
+/* The input-row prompt shares the line with the input: a long cwd truncates
+   instead of pushing the input off the narrow terminal column. */
+.in .prompt {
+  flex: none;
+  max-width: 45%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.in {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 10px 7px;
+  border-top: 1px solid var(--edex-border);
+  flex: none;
+}
+
+.input {
+  flex: 1;
+  min-width: 0;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+  color: var(--edex-green);
+  font-family: inherit;
+  font-size: 12px;
+  caret-color: var(--edex-green);
+  caret-shape: block;
+}

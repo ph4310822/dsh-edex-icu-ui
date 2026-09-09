@@ -1,0 +1,90 @@
+/* CPU widget: per-core sparklines, metric row, memory/swap bars. */
+
+.cpuPairs {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-bottom: 8px;
+}
+
+.cpuPair {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cpuLabel {
+  width: 38px;
+  color: var(--edex-dim);
+  flex: none;
+}
+
+.cpuPct {
+  width: 42px;
+  text-align: right;
+  flex: none;
+}
+
+.spark {
+  flex: 1;
+  min-width: 0;
+  width: 100%;
+  color: var(--edex-cyan);
+}
+
+.metricRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.metric {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  flex: 1;
+}
+
+.metricKey {
+  color: var(--edex-dim);
+}
+
+.memBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.memLabel {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  color: var(--edex-dim);
+}
+
+.memPct {
+  color: var(--edex-green);
+}
+
+.blockBar {
+  display: flex;
+  gap: 2px;
+  height: 10px;
+}
+
+.blockOn,
+.blockOff {
+  flex: 1;
+}
+
+.blockOn {
+  background: var(--edex-green);
+  box-shadow: 0 0 6px color-mix(in srgb, var(--edex-green) 50%, transparent);
+}
+
+.blockOff {
+  background: var(--edex-border);
+  opacity: 0.4;
+}

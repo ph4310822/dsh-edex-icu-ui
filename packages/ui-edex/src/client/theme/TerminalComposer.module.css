@@ -1,0 +1,86 @@
+/* Terminal-style composer overrides for the stock InputBar. The composer's
+   DOM carries stable data hooks (data-composer-card on the capsule,
+   data-input-scroll on the draft scrollport, data-input-backdrop/mirror on
+   the text layers, data-phase on the textarea), so these :global rules can
+   retheme it without touching ui-conversation.
+   Specificity note: the conversation surface loads lazily, so its stylesheet
+   can land AFTER this plugin's — every override doubles its attribute to win
+   the tie (e.g. [data-input-backdrop][data-input-backdrop] > .backdrop).
+   Text-layer contract: the backdrop carries the VISIBLE glyphs; the textarea
+   and the mirror must stay transparent (only the caret is the textarea's, the
+   mirror is the caret-reveal ruler). All three MUST share font metrics or the
+   caret drifts off the glyphs — the stock InputBar rule already applies the
+   same stack (chip cell first, then the app font) and the same inherited size
+   to all three, so dropping the mono override below keeps them aligned while
+   the input reads in the app's own font. */
+
+/* The terminal palette must resolve inside the composer too: it lives outside
+   the shell frame, so define the vars on body. The browser half re-sets the
+   color vars inline from the Theme Color setting (inline wins this
+   stylesheet); these values are the default palette, so the input reads
+   correctly even before the scope publishes. The plugin's style tag is
+   removed on unload. */
+:global(body) {
+  --edex-font: 'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, Menlo, monospace;
+  --edex-green: #37ff71;
+  --edex-dim: #7f96a8;
+  --edex-border: #1e2a34;
+  --edex-panel-2: #0f181d;
+  --edex-amber: #ffd34e;
+  --edex-red: #d84351;
+  --edex-cyan: #29dfff;
+}
+
+/* The composer input reads like the reference's vital-input fields: a dark
+   near-black box with a 1px blue-gray border and a 4px radius (analysis
+   borderFeatures.inputs), instead of the bare terminal line. */
+:global([data-composer-card][data-composer-card]) {
+  border-radius: 4px;
+  background: #0b1016;
+  border: 1px solid var(--edex-border);
+  box-shadow: none;
+}
+
+/* The draft scrollport becomes the terminal line: a flex row with the
+   injected `~/<folder>` path prompt (flex: none) at the left and the text
+   stack (flex: 1) filling the rest — `/directory [user input]`. The prompt
+   scrolls with the input, like a real terminal. */
+:global([data-input-scroll][data-input-scroll]) {
+  display: flex;
+  align-items: flex-start;
+  background: transparent;
+}
+
+/* The text-stack wrapper (.grow, the scrollport's other direct child) takes
+   the remaining width after the prompt; without this it sizes to the draft's
+   intrinsic text width and overflows the card. */
+:global([data-input-scroll][data-input-scroll] > :not([data-edex-path])) {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+/* Input text size: pinned to 14px to match the terminal path prompt, so the
+   whole line reads as one terminal line (`~/<folder> [input]`). The stock
+   InputBar stack ('DshChipCell' first for the U+FFFC placeholder advance,
+   then the app font) stays; only the size is overridden, identically on all
+   three text layers so the caret and glyphs keep sharing metrics. */
+:global(textarea[data-phase][data-phase]),
+:global([data-input-backdrop][data-input-backdrop]),
+:global([data-input-mirror][data-input-mirror]) {
+  font-size: 14px;
+}
+
+/* Only the backdrop layer gets the visible glyphs in the primary white (the
+   reference's input values are near-white; accents stay in the labels); the
+   textarea and mirror keep their transparent color. */
+:global([data-input-backdrop][data-input-backdrop]) {
+  color: #eaf4fd;
+}
+
+:global(textarea[data-phase][data-phase]) {
+  background: transparent;
+  /* The terminal caret: a thick block cursor where caret-shape is supported
+     (recent Chromium/Firefox), falling back to a solid green caret. */
+  caret-shape: block;
+  caret-color: var(--edex-green);
+}

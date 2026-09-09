@@ -1,0 +1,20 @@
+# The dsh-edex-ui bundle patch: an eDEX-UI style shell frame around the
+# default web surface. Purely additive — nothing in the default surface is
+# disabled: the original UI stays fully composed and interactive, and the
+# eDEX frame (left system bar, right network bar, bottom-left filesystem
+# browser) is registered into the root `shell.overlay` list slot, which the
+# stock layout renders above every column. The frame reshapes the layout
+# frame into the center region and restores it on unload.
+#
+# The systemMetrics Host Remote provides the panels' data; the CRT theme
+# package registers an opt-in Appearance row (Settings → Appearance →
+# Terminal) that recolors the whole app green-on-black.
+- insert:
+    - id: host-system-metrics
+      name: '@danielng23/dsh-host-system-metrics'
+
+    - id: ui-edex
+      name: '@danielng23/dsh-client-ui-edex'
+
+    - id: ui-theme-terminal
+      name: '@danielng23/dsh-client-ui-theme-terminal'

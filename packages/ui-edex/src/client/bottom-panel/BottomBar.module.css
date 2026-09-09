@@ -1,0 +1,32 @@
+/* Bottom bar: the horizontal strip hosting the files/preview/terminal
+   widgets. The three sections tile the same widths as the shell columns
+   above: files = left bar (17vw), preview = center region, terminal = right
+   bar (21.25vw). The bleed variant drops the chrome padding so the widget
+   bodies are full-bleed with their own internal spacing; no divider lines
+   between the columns. */
+
+.panel {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  overflow: hidden;
+}
+
+/* min-width: 0 lets the flex-basis (17vw / 21.25vw) win over the content. */
+.panel [data-widget] {
+  min-width: 0;
+}
+
+/* Keep the column widths of the cells these widget sections replaced. */
+.panel [data-widget='files'] {
+  flex: 0 0 17vw;
+}
+
+.panel [data-widget='preview'] {
+  flex: 1 1 0;
+}
+
+.panel [data-widget='terminal'] {
+  flex: 0 0 21.25vw;
+}

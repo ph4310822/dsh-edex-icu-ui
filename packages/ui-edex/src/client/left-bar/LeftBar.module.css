@@ -1,0 +1,25 @@
+/* Left column: the vertical stack hosting the info/cpu/process widgets.
+   The scrollbar follows the theme color (--edex-green thumb on a tinted
+   --edex-panel-2 track). */
+
+.panel {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--edex-green) var(--edex-panel-2);
+}
+
+.panel::-webkit-scrollbar {
+  width: 6px;
+}
+
+.panel::-webkit-scrollbar-track {
+  background: var(--edex-panel-2);
+}
+
+.panel::-webkit-scrollbar-thumb {
+  background: var(--edex-green);
+  border-radius: 3px;
+}

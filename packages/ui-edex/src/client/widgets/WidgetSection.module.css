@@ -1,0 +1,62 @@
+/* Shared widget section chrome: the clinical monitor card. The ICU reference
+   renders every widget as a closed 1px blue-gray rectangle (#1e2a34) with a
+   6px radius and a slate panel fill (#0f181d) — no brackets, no glow (analysis
+   borderFeatures.cards). One card per WidgetSection inside each bar. The
+   center slot MUST stay transparent: it hosts the original DSH workspace
+   (XRY lesson) — the chrome there lives on the .centerWidget container. */
+
+.section {
+  padding: 8px;
+  margin: 6px;
+  background: var(--edex-panel-2);
+  border: 1px solid var(--edex-border);
+  border-radius: 6px;
+}
+
+.title {
+  color: var(--edex-green);
+  letter-spacing: 2px;
+  margin-bottom: 6px;
+}
+
+/* The center slot hosts the ORIGINAL UI — never carry card chrome. */
+.section[data-widget='center'] {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* Flex-fill the bar's leftover height (screen − other sections). */
+.fill {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+/* Tight padding for full-bleed widgets (the featured monitor). */
+.compact {
+  padding: 4px;
+}
+
+/* Zero the chrome padding so the widget body owns all inner spacing
+   (full-bleed bottom widgets like the file list and terminal). */
+.bleed {
+  padding: 0;
+}
+
+/* Keep the section heading inset from the card edges when the section body
+   is compact (the featured monitor) or bleed (bottom widgets). The title
+   padding compensates the section's own padding so every title text lands at
+   a consistent inset:
+   compact section = 4px → title 4px/4px; bleed section = 0 → 8px/8px. */
+.compact .title {
+  padding: 4px 4px 0;
+}
+
+.bleed .title {
+  padding: 8px 8px 0;
+}

@@ -1,0 +1,34 @@
+/* Traffic widget: up/down throughput header + chart. */
+
+.trafficHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.key {
+  color: var(--edex-dim);
+}
+
+/* The chart fills the widget's leftover height (the fill section flex-fills
+   the bar); the SVG fills the chart wrapper, with a 1:1 viewBox measured by
+   ResizeObserver. */
+.trafficChart {
+  flex: 1;
+  min-height: 0;
+  position: relative;
+}
+
+.traffic {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: var(--edex-green);
+}
+
+/* The upload trace stays in the fixed amber accent while the grid and the
+   download trace follow the theme color (currentColor on the group above). */
+.trafficUp {
+  stroke: var(--edex-amber);
+}
